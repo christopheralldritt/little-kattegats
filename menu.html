@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Viking Feast Menu</title>
+        <!-- Link to the external stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <img src="images/viking_1.png" alt="Viking 1" class="side-viking viking-left">
+    <img src="images/viking_2.png" alt="Viking 2" class="side-viking viking-right">
+
+    <h1>Little Kattegat’s</h1>
+    <p>
+        Welcome to a banquet worthy of Ragnar Lothbrok’s most savage raids.<br>
+        Feast like a berserker, but beware—our dishes bite back! Skol!
+    </p>
+
+    <!-- Appetizers -->
+    <div class="menu-section">
+        <h2>Appetizers</h2>
+        <div class="menu-item">
+            <div class="item-name">
+                Floki’s Fingernail Fritters
+                <img src="images/floki-fritters.png" alt="Floki’s Fingernail Fritters" class="thumbnail">
+            </div>
+            <div class="item-description">
+                Crispy fried potato skins, stuffed with smoked herring and drizzled with a tangy blood-red beet sauce, inspired by Floki’s nail-biting shipbuilding madness.
+            </div>
+            <div class="price-container">
+                <div class="item-price">$5.99</div>
+                <label for="quantity-floki-fritters" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-floki-fritters" name="quantity-floki-fritters" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">
+                Earl Haraldson’s Severed Ear Dumplings
+                <img src="images/ear-dumplings.jpg" alt="Earl Haraldson’s Severed Ear Dumplings" class="thumbnail">
+            </div>
+            <div class="item-description">
+                Steamed dough pockets filled with spiced pork, served with a fiery mustard dip that stings like the axe that took Haraldson’s ear.
+            </div>
+            <div class="price-container">
+                <div class="item-price">$6.99</div>
+                <label for="quantity-ear-dumplings" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-ear-dumplings" name="quantity-ear-dumplings" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">
+                Blood Eagle Bruschetta
+                <img src="images/blood-bruschetta.jpg" alt="Blood Eagle Bruschetta" class="thumbnail">
+            </div>
+            <div class="price-container">
+                <div class="item-price">$7.99</div>
+                <label for="quantity-blood-bruschetta" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-blood-bruschetta" name="quantity-blood-bruschetta" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+    </div>
+
+    <!-- Entrees -->
+    <div class="menu-section">
+        <h2>Entrees</h2>
+        <div class="menu-item">
+            <div class="item-name">
+                Ragnar’s Ribcage Roast
+                <img src="images/ragnar-ribs.jpg" alt="Ragnar’s Ribcage Roast" class="thumbnail">
+            </div>
+            <div class="item-description">
+                Slow-roasted boar ribs, slathered in a smoky mead glaze, served with charred root vegetables—torn apart like Ragnar’s enemies in battle.
+            </div>
+            <div class="price-container">
+                <div class="item-price">$13.99</div>
+                <label for="quantity-ragnar-ribs" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-ragnar-ribs" name="quantity-ragnar-ribs" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">
+                Lagertha’s Skull-Smashed Salmon
+                <img src="images/lagertha-salmon.jpg" alt="Lagertha’s Skull-Smashed Salmon" class="thumbnail">
+            </div>
+            <div class="item-description">
+                Grilled salmon fillet, smashed with a mallet of herbs and garlic, paired with barley porridge, as fierce as Lagertha’s shieldmaiden wrath.
+            </div>
+            <div class="price-container">
+                <div class="item-price">$14.99</div>
+                <label for="quantity-lagertha-salmon" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-lagertha-salmon" name="quantity-lagertha-salmon" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">
+                Ivar’s Boneless Beef Shank
+                <img src="images/ivar-beef.jpg" alt="Ivar’s Boneless Beef Shank" class="thumbnail">
+            </div>
+            <div class="item-description">
+                Tender beef shank braised in dark ale, so soft it falls apart like Ivar’s enemies, served with a side of mashed turnips and a spiteful pepper sauce.
+            </div>
+            <div class="price-container">
+                <div class="item-price">$15.99</div>
+                <label for="quantity-ivar-beef" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-ivar-beef" name="quantity-ivar-beef" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu-section">
+        <h2>Desserts</h2>
+        <div class="menu-item">
+            <div class="item-name">
+                Athelstan’s Martyr Mousse
+                <img src="images/martyr-mousse.jpg" alt="Athelstan’s Martyr Mousse" class="thumbnail">
+            </div>
+            <div class="item-description">
+                Dark chocolate mousse layered with crimson berry compote, topped with whipped cream and a cross-shaped biscuit, as conflicted as Athelstan’s soul.
+            </div>
+            <div class="price-container">
+                <div class="item-price">$4.99</div>
+                <label for="quantity-athelstan-mousse" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-athelstan-mousse" name="quantity-athelstan-mousse" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">
+                Bjorn’s Bear-Bitten Baklava
+                <img src="images/bjorn-baklava.jpg" alt="Bjorn’s Bear-Bitten Baklava" class="thumbnail">
+            </div>
+            <div class="item-description">
+                Flaky pastry soaked in honey and studded with crushed walnuts, jaggedly torn to mimic Bjorn’s mauling by that bear.
+            </div>
+            <div class="price-container">
+                <div class="item-price">$5.49</div>
+                <label for="quantity-bjorn-baklava" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-bjorn-baklava" name="quantity-bjorn-baklava" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">
+                Siggy’s Frozen Heart Tart
+                <img src="images/siggy-tart.jpg" alt="Siggy’s Frozen Heart Tart" class="thumbnail">
+            </div>
+            <div class="item-description">
+                A chilling lingonberry tart with a buttery crust, served ice-cold to honor Siggy’s tragic plunge into the icy river.
+            </div>
+            <div class="price-container">
+                <div class="item-price">$4.49</div>
+                <label for="quantity-siggy-tart" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-siggy-tart" name="quantity-siggy-tart" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="menu-section">
+        <h2>Drinks</h2>
+        <div class="menu-item">
+            <div class="item-name">
+                Viper Pit Ale
+                <img src="images/viper-ale.jpg" alt="Viper Pit Ale" class="thumbnail">
+            </div>
+            <div class="item-description">
+                A frothy, dark stout with a venomous bite of hops, brewed to commemorate Ragnar’s slithery demise in King Aelle’s snake pit.
+            </div>
+            <div class="price-container">
+                <div class="item-price">$3.99</div>
+                <label for="quantity-viper-ale" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-viper-ale" name="quantity-viper-ale" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">
+                Seer’s Blood Mead
+                <img src="images/seer-mead.jpg" alt="Seer’s Blood Mead" class="thumbnail">
+            </div>
+            <div class="item-description">
+                A sweet yet sinister honey wine, stained red with hibiscus, as foreboding as the Seer’s cryptic prophecies.
+            </div>
+            <div class="price-container">
+                <div class="item-price">$4.99</div>
+                <label for="quantity-seer-mead" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-seer-mead" name="quantity-seer-mead" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">
+                Rollo’s Betrayal Brew
+                <img src="images/rollo-brew.jpg" alt="Rollo’s Betrayal Brew" class="thumbnail">
+            </div>
+            <div class="item-description">
+                A tart, amber cider with a bitter aftertaste, served in a horn to reflect Rollo’s treacherous turn against his kin.
+            </div>
+            <div class="price-container">
+                <div class="item-price">$3.49</div>
+                <label for="quantity-rollo-brew" class="quantity-label">Quantity:</label>
+                <input type="number" id="quantity-rollo-brew" name="quantity-rollo-brew" class="quantity-input" min="0" step="1" placeholder="0">
+            </div>
+        </div>
+    </div>
+        <!-- Order Form -->
+        <script>
+            // Prices for menu items
+            const prices = {
+                "floki-fritters": 5.99,
+                "ear-dumplings": 6.99,
+                "blood-bruschetta": 7.99,
+                "ragnar-ribs": 13.99,
+                "lagertha-salmon": 14.99,
+                "ivar-beef": 15.99,
+                "athelstan-mousse": 4.99,
+                "bjorn-baklava": 5.49,
+                "siggy-tart": 4.49,
+                "viper-ale": 3.99,
+                "seer-mead": 4.99,
+                "rollo-brew": 3.49
+            };
+        
+            // Function to update the selected items and total price
+            function updateSelectedItems() {
+                const selectedItemsContainer = document.getElementById("selected-items");
+                selectedItemsContainer.innerHTML = ""; // Clear previous items
+        
+                let totalPrice = 0;
+        
+                // Get all quantity input fields
+                const quantityInputs = document.querySelectorAll(".quantity-input");
+        
+                quantityInputs.forEach((input) => {
+                    const quantity = parseInt(input.value);
+                    const itemId = input.id.replace("quantity-", ""); // Extract item ID
+                    const itemName = input.closest(".menu-item").querySelector(".item-name").textContent.trim();
+        
+                    if (!isNaN(quantity) && quantity > 0) {
+                        const itemPrice = prices[itemId];
+                        const lineTotal = (itemPrice * quantity).toFixed(2);
+                        totalPrice += parseFloat(lineTotal);
+        
+                        // Add item to the selected items list
+                        const itemElement = document.createElement("div");
+                        itemElement.textContent = `${itemName} (x${quantity}): $${lineTotal}`;
+                        selectedItemsContainer.appendChild(itemElement);
+                    }
+                });
+        
+                // Update total price
+                document.getElementById("total-price").textContent = `$${totalPrice.toFixed(2)}`;
+            }
+        
+            // Attach event listeners to all quantity input fields
+            document.querySelectorAll(".quantity-input").forEach((input) => {
+                input.addEventListener("input", updateSelectedItems);
+            });
+        </script>
+
+    <div class="menu-section">
+        <h2>Place Your Order</h2>
+        <form id="order-form" action="submit_order.php" method="POST">
+            <!-- Customer Contact Information -->
+            <fieldset>
+                <legend>Customer Contact Information</legend>
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+    
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+    
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+            </fieldset>
+    
+            <!-- Menu Item Selection -->
+
+                <fieldset id="menu-item-selection-fieldset">
+                    <legend>Your Selected Items</legend>
+                    <div id="selected-items">
+                        <!-- Dynamically generated list of selected items will appear here -->
+                    </div>
+                    <strong>Total Price: <span id="total-price">$0.00</span></strong>
+                </fieldset>
+
+                <!-- Additional Options -->
+                <fieldset id="additional-options-fieldset">
+                    <legend>Additional Options</legend>
+        
+                    <label for="delivery-date">Preferred Delivery Date:</label><br>
+                    <input type="date" id="delivery-date" name="delivery-date" required><br><br>
+        
+                    <label for="delivery-time">Preferred Delivery Time:</label><br>
+                    <input type="time" id="delivery-time" name="delivery-time" required><br><br>
+        
+                    <label>Order Type:</label><br>
+                    <input type="radio" id="delivery" name="order-type" value="delivery" required>
+                    <label for="delivery">Delivery</label><br>
+                    <input type="radio" id="pickup" name="order-type" value="pickup">
+                    <label for="pickup">Pickup</label><br><br>
+        
+                    <label for="delivery-instructions">Delivery Instructions:</label><br>
+                    <select id="delivery-instructions" name="delivery-instructions">
+                        <option value="">-- Select Instructions --</option>
+                        <option value="leave-at-door">Leave at the Door</option>
+                        <option value="call-on-arrival">Call on Arrival</option>
+                        <option value="hand-to-recipient">Hand to Recipient</option>
+                    </select><br><br>
+        
+                    <label for="tip">Add a Tip:</label><br>
+                    <input type="number" id="tip" name="tip" min="0" step="0.01" placeholder="0.00"><br><br>
+        
+                    <label for="promo-code">Promo Code:</label>
+                    <input type="text" id="promo-code" name="promo-code" placeholder="Enter promo code"><br><br>
+        
+                </fieldset>
+    
+            <!-- Payment Information -->
+            <fieldset>
+                <legend>Payment Information</legend>
+                <label for="payment-method">Payment Method:</label><br>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="cash">Cash on Delivery</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select><br><br>
+    
+                <label for="special-instructions">Special Instructions:</label><br>
+                <textarea id="special-instructions" name="special-instructions" rows="4" cols="50" placeholder="Any special requests or dietary restrictions?"></textarea><br><br>
+            </fieldset>
+    
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+ 
+    <div class="footer">
+        <div class="home-nav">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+        <p>Feast prepared by the berserkers of Valhalla’s kitchens. No Northumbrians were harmed in the making of this menu... probably.</p>
+        <p>&copy; 2025 Little Kattegat’s. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Prices for menu items
+        
+        function updateSelectedItems() {
+            const selectedItemsContainer = document.getElementById("selected-items");
+            selectedItemsContainer.innerHTML = ""; // Clear previous items
+        
+            let totalPrice = 0;
+        
+            const quantityDropdowns = document.querySelectorAll(".quantity-dropdown");
+        
+            quantityDropdowns.forEach((dropdown) => {
+                const quantity = parseInt(dropdown.value);
+                const itemId = dropdown.id.replace("quantity-", ""); // Extract item ID
+                const itemName = dropdown.closest(".menu-item").querySelector(".item-name").textContent.trim();
+        
+                if (!isNaN(quantity) && quantity > 0) {
+                    const itemPrice = prices[itemId];
+                    const lineTotal = (itemPrice * quantity).toFixed(2);
+                    totalPrice += parseFloat(lineTotal);
+        
+                    // Add item to the selected items list
+                    const itemElement = document.createElement("div");
+                    itemElement.textContent = `${itemName} (x${quantity}): $${lineTotal}`;
+                    selectedItemsContainer.appendChild(itemElement);
+                }
+            });
+        
+        
+            document.getElementById("total-price").textContent = `$${totalPrice.toFixed(2)}`;
+        }
+        
+        document.querySelectorAll(".quantity-dropdown").forEach((dropdown) => {
+            dropdown.addEventListener("change", updateSelectedItems);
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Little Kattegat’s</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+        }
+        .contact-header {
+            margin-top: 40px;
+            color: #fff;
+            text-shadow: 0 2px 8px #000, 0 0 2px #000;
+        }
+        .contact-header h1 {
+            font-family: 'norseregular', serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .contact-header p {
+            font-family: 'norseregular', serif;
+            font-size: 1.3em;
+            color: #8b0000;
+            margin: 10px 0 0 0;
+        }
+        .popup-btn {
+            font-family: 'norseregular', serif;
+            font-size: 1.2em;
+            background: #8b0000;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 32px;
+            margin: 40px 0 0 0;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transition: background 0.2s;
+        }
+        .popup-btn:hover {
+            background: #a83232;
+        }
+        .popup-form-bg {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0; top: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-form-bg.active {
+            display: flex;
+        }
+        .popup-form {
+            background: rgba(255,255,255,0.97);
+            border-radius: 16px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+            padding: 32px 28px 24px 28px;
+            max-width: 400px;
+            width: 90vw;
+            position: relative;
+            text-align: left;
+        }
+        .popup-form h2 {
+            font-family: 'norseregular', serif;
+            color: #8b0000;
+            margin-top: 0;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .popup-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-family: 'norseregular', serif;
+            color: #4a2c1a;
+        }
+        .popup-form input,
+        .popup-form textarea {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        .popup-form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .popup-form .close-btn {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: #8b0000;
+            cursor: pointer;
+        }
+        .popup-form .submit-btn {
+            font-family: 'norseregular', serif;
+            background: #8b0000;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 28px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .popup-form .submit-btn:hover {
+            background: #a83232;
+        }
+        /* Side vikings */
+        .side-viking {
+            position: fixed;
+            top: 50%;
+            width: 500px;
+            height: auto;
+            z-index: 2;
+            transform: translateY(-50%);
+            pointer-events: none;
+            opacity: 0.85;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .viking-left {
+            left: 0;
+        }
+        .viking-right {
+            right: 0;
+        }
+        @media (max-width: 900px) {
+            .side-viking {
+                width: 70px;
+            }
+        }
+        @media (max-width: 600px) {
+            .side-viking {
+                display: none;
+            }
+        }
+        /* Footer styles (reuse from home) */
+        .footer {
+            margin-top: 40px;
+            font-size: 1.1em;
+            color: #4a2c1a;
+            text-align: center;
+        }
+        .home-nav {
+            margin: 20px 0;
+        }
+        .home-nav a {
+            display: inline-block;
+            margin: 0 18px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5em;
+            position: relative;
+            transition: color 0.2s;
+        }
+        .home-nav a:hover {
+            color: crimson;
+        }
+        .home-nav a::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -3px;
+            width: 0;
+            height: 2px;
+            background: crimson;
+            transition: width 0.4s cubic-bezier(.4,0,.2,1);
+            transform: translateX(-50%);
+        }
+        .home-nav a:hover::after {
+            width: 100%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <img src="images/viking_1.png" alt="Viking 1" class="side-viking viking-left">
+    <img src="images/viking_2.png" alt="Viking 2" class="side-viking viking-right">
+
+    <div class="contact-header">
+        <h1>Contact Little Kattegat’s</h1>
+        <p>Send us a raven or a message below!</p>
+    </div>
+
+    <button class="popup-btn" onclick="document.querySelector('.popup-form-bg').classList.add('active')">
+        Write to Us
+    </button>
+
+    <div class="popup-form-bg" onclick="if(event.target===this)this.classList.remove('active')">
+        <form class="popup-form" onsubmit="event.preventDefault(); this.parentElement.classList.remove('active'); alert('Thank you for your message, Viking!');">
+            <button type="button" class="close-btn" onclick="this.closest('.popup-form-bg').classList.remove('active')">&times;</button>
+            <h2>Send a Message</h2>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" required>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" required>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+    </div>
+
+    <div class="footer" style="margin-top: auto;">
+        <div class="home-nav">
+            <a href="index.html">Home</a>
+        </div>
+        <p>© 2025 Little Kattegat’s. All rights reserved.</p>
+    </div>
+</body>
+</html>

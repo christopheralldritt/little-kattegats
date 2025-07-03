@@ -1,0 +1,342 @@
+/*Styles.css*/
+@font-face {
+    font-family: 'norseregular';
+    src: url('fonts/norse-font/norse-kawl-webfont.woff2') format('woff2'),
+         url('fonts/norse-font/norse-kawl-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+#selected-items div {
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.quantity-input {
+    width: 50px; /* Set a smaller width */
+    height: 25px; /* Adjust height if needed */
+    font-size: 0.9em; /* Adjust font size for better fit */
+    padding: 1px; /* Reduce padding */
+    text-align: center; /* Center-align the text */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 4px; /* Optional: Add rounded corners */
+}
+
+.price-container {
+    position: relative;
+}
+
+.quantity-label,
+.quantity-dropdown {
+    display: none; 
+}
+
+.price-container:hover .quantity-label,
+.price-container:hover .quantity-dropdown {
+    display: inline-block; 
+    margin-top: 5px;
+}
+
+.item-price {
+    font-size: 1.5em; 
+    font-family: 'norseregular', serif; 
+    color: #8b0000; 
+    margin-top: 5px;
+    text-align: center; 
+}
+
+.thumbnail {
+    width: 50px; /* Thumbnail size */
+    height: auto;
+    margin-left: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.thumbnail:hover {
+    transform: scale(5); /* Enlarge the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow */
+    z-index: 10; /* Ensure it appears above other elements */
+    position: relative;
+}
+
+.floating-image {
+    position: fixed;
+    z-index: -2; 
+    opacity: 0.2; 
+    pointer-events: none; 
+}
+
+.floating-image.viking-1 {
+    top: 10%;
+    left: 5%;
+    width: 150px; /* Adjust size as needed */
+    animation: float 10s infinite alternate ease-in-out;
+}
+
+.floating-image.viking-2 {
+    top: 50%;
+    right: 5%;
+    width: 200px; /* Adjust size as needed */
+    animation: float 12s infinite alternate ease-in-out;
+}
+
+h1, h2 {
+    font-family: 'norseregular', serif;
+}
+body {
+    background-image: url('images/large-leather.png'); /* Main background */
+    background-size: cover;
+    background-color: #d2a679;
+    color: #2e1b0f;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    border: 40px solid transparent; 
+    border-image: url('images/nordic-knot2.png') 60 round;
+    border-radius: 20px;
+    box-sizing: border-box; /
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/leatherhide.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+h1 {
+    font-size: 3em;
+    color: #8b0000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    font-family: 'norseregular', serif;
+    font-weight: bold;
+}
+
+h1 + p {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-top: 10px; 
+}
+
+h2 {
+    font-size: 2em;
+    color: #4a2c1a;
+    border-bottom: 2px solid #8b0000;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin: 20px 0;
+}
+
+.menu-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    margin: 15px 0;
+}
+
+.item-name {
+    font-size: 1.5em;
+    color: #8b0000;
+    font-weight: bold;
+}
+
+.item-description {
+    font-size: 1em;
+    color: #2e1b0f;
+    font-style: italic;
+}
+
+#menu-item-selection-fieldset select{
+    text-align: center;
+    position: relative;
+    width: 100%; 
+    max-width: 300px; 
+    box-sizing: border-box; 
+}
+
+
+#additional-options-fieldset {
+    text-align: left; 
+    position: relative; 
+}
+
+#additional-options-fieldset {
+    text-align: left; 
+    position: relative; 
+}
+
+
+#additional-options-fieldset label:not([for="delivery"]):not([for="pickup"]):not([for="promo-code"]) {
+    display: inline-block;
+    margin-left: 35%;
+    text-align: left;
+}
+
+#additional-options-fieldset input#delivery-date {
+    margin-left: 35%; 
+    display: inline-block; 
+}
+
+#additional-options-fieldset input#delivery-time {
+    margin-left: 35%; 
+    display: inline-block; 
+}
+
+#additional-options-fieldset select#delivery-instructions {
+    margin-left: 35%; 
+    display: inline-block; 
+}
+
+#additional-options-fieldset input#tip {
+    margin-left: 35%; 
+    display: inline-block; 
+}
+
+#additional-options-fieldset input#delivery {
+    margin-left: 35%; 
+    display: inline-block; 
+}
+#additional-options-fieldset input#pickup {
+    margin-left: 35%; 
+    display: inline-block; 
+}
+
+#additional-options-fieldset label[for="promo-code"] {
+    display: block; /* Ensure the label is on its own line */
+    margin-left: 35%; /* Match the current label indentation */
+    text-align: left; /* Keep the label text left-aligned */
+}
+
+#additional-options-fieldset input#promo-code {
+    display: block; /* Ensure the input is on its own line */
+    margin-left: 35%; /* Align the input with the label */
+    /*width: 50%; /* Optional: Adjust the width of the input field */
+}
+
+
+.popup-photo {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.popup-photo img {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; 
+    border: 2px solid #8b0000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.item-name:hover .popup-photo img {
+    display: block;
+}
+
+.side-viking {
+    position: fixed;
+    top: 50%;
+    width: 500px;
+    height: auto;
+    z-index: 2;
+    transform: translateY(-50%);
+    pointer-events: none;
+    opacity: 0.85;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.viking-left {
+    left: 0;
+}
+.viking-right {
+    right: 0;
+}
+@media (max-width: 900px) {
+    .side-viking {
+        width: 70px;
+    }
+}
+@media (max-width: 600px) {
+    .side-viking {
+        display: none;
+    }
+}
+
+
+.footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #4a2c1a;
+}
+
+.home-nav {
+    margin: 20px 0;
+}
+.home-nav a {
+    display: inline-block;
+    margin: 0 18px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: relative;
+    transition: color 0.2s;
+}
+.home-nav a:hover {
+    color: crimson;
+}
+.home-nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: crimson;
+    transition: width 0.4s cubic-bezier(.4,0,.2,1);
+    transform: translateX(-50%);
+}
+.home-nav a:hover::after {
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #4a2c1a;
+    line-height: 1.5;
+}

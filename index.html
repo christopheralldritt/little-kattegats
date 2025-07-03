@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Kattegat’s Viking Feast</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #d2a679 url('images/large-leather.png') center center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+        }
+        
+        .header {
+            padding: 20px 30px;
+            background: transparent;
+            color: #fff;
+            text-shadow: 0 2px 8px #000, 0 0 2px #000;
+        }
+
+        .header h1 {
+            margin: 10px;
+            font-size: 2.5em;
+        }
+
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.5em;
+            color: #8b0000;
+            line-height: 1.5;
+            font-family: 'norseregular', serif;
+        }
+
+        .content {
+            flex: 1 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer {
+            flex-shrink: 0;
+            padding: 10px 0 12px 0;
+            background: transparent;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 1.2em;
+            color: black;
+            line-height: 1.5;
+        }
+
+        .home-logo {
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+        .home-nav {
+            margin: 20px 0;
+        }
+
+        .home-nav a {
+            display: inline-block;
+            margin: 0 18px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5em;
+            position: relative;
+            transition: color 0.2s;
+        }
+        
+        .home-nav a:hover {
+            color: crimson;
+        }
+
+        .home-nav a::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -3px;
+            width: 0;
+            height: 2px;
+            background: crimson;
+            transition: width 0.4s cubic-bezier(.4,0,.2,1);
+            transform: translateX(-50%);
+        }
+
+        .home-nav a:hover::after {
+            width: 100%;
+            transform: translateX(-50%);
+        }
+
+        .background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 60vw;
+            height: 60vh;
+            min-width: unset;
+            min-height: unset;
+            max-width: 90vw;
+            max-height: 90vh;
+            z-index: 0;
+            object-fit: cover;
+            opacity: 0.35;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            border-radius: 24px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+        }
+
+        .overlay-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            width: 60vw;
+            max-width: 90vw;
+            color: #fff;
+            text-shadow: 0 2px 8px #000, 0 0 2px #000;
+            pointer-events: none;
+            text-align: center;
+        }
+
+        @keyframes spin-move-down {
+            0%   { transform: translateY(0) rotate(0deg) scale(0.5); }
+            100% { transform: translateY(200px) rotate(360deg) scale(7); }
+        }
+
+        .home-logo {
+            width: 120px;
+            margin-bottom: 10px;
+            animation: spin-move-down 5s linear infinite;
+            opacity: 0.25;
+        }
+        
+        .side-viking {
+            position: fixed;
+            top: 50%;
+            width: 500px;
+            height: auto;
+            z-index: 2;
+            transform: translateY(-50%);
+            pointer-events: none;
+            opacity: 0.85;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .viking-left {
+            left: 0;
+        }
+        .viking-right {
+            right: 0;
+        }
+        @media (max-width: 900px) {
+            .side-viking {
+                width: 70px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <img src="images/viking_1.png" alt="Viking 1" class="side-viking viking-left">
+    <img src="images/viking_2.png" alt="Viking 2" class="side-viking viking-right">
+    <div class="header">
+        <h1>Welcome to Little Kattegat’s</h1>
+        <p>
+            Feast like a true Viking!<br>
+            Join us for legendary meals, fierce flavors, and a banquet hall worthy of Valhalla.<br>
+            Skol!
+        </p>
+    </div>
+    <div class="content">
+        <video 
+            src="video/viking-loop.mp4" 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="background-video">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay-content">
+            <img src="images/Shield6.jpg" alt="Viking Logo" class="home-logo">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="home-nav">
+            <a href="menu.html">Menu</a>
+            <a href="maptest.html">Find Us</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p>Feast prepared by the berserkers of Valhalla’s kitchens. No Northumbrians were harmed in the making of this menu... probably.</p>
+        <p>© 2025 Little Kattegat’s. All rights reserved.</p>
+    </div>
+    <audio src="audio/LittleKattegatTheme.mp3" autoplay loop>
+        Your browser does not support the audio element.
+    </audio>
+        <script>
+            // Optional: Add any JavaScript functionality here if needed
+        </script>
+</body>
+</html>

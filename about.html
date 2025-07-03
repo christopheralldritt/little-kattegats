@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Little Kattegat’s</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-header {
+            margin-top: 40px;
+            color: #fff;
+            text-shadow: 0 2px 8px #000, 0 0 2px #000;
+            text-align: center;
+        }
+        .about-header h1 {
+            font-family: 'norseregular', serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .about-team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0 20px 0;
+        }
+        .team-member {
+            background: rgba(255,255,255,0.92);
+            border-radius: 16px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+            padding: 24px 18px 18px 18px;
+            max-width: 320px;
+            text-align: center;
+            position: relative;
+            z-index: 3; /* Bring biographies to the front */
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #8b0000;
+            margin-bottom: 12px;
+            background: #fff;
+        }
+        .team-member h2 {
+            font-family: 'norseregular', serif;
+            color: #4a2c1a;
+            font-size: 1.3em;
+            margin: 10px 0 6px 0;
+        }
+        .team-member p {
+            color: #4a2c1a;
+            font-size: 1em;
+            margin: 0;
+            font-family: 'norseregular', serif;
+        }
+
+        .team-member h2 a {
+            color: #111;
+            text-decoration: none;
+            font-family: 'norseregular', serif;
+            position: relative;
+            transition: color 0.2s;
+        }
+        .team-member h2 a::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -3px;
+            width: 0;
+            height: 2px;
+            background: crimson;
+            transition: width 0.4s cubic-bezier(.4,0,.2,1);
+            transform: translateX(-50%);
+        }
+        .team-member h2 a:hover {
+            color: crimson;
+        }
+        .team-member h2 a:hover::after {
+            width: 100%;
+            transform: translateX(-50%);
+        }
+
+        .side-viking {
+            z-index: 1; /* Make sure side vikings are underneath */
+        }
+
+        @media (max-width: 900px) {
+            .about-team {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+    <img src="images/viking_1.png" alt="Viking 1" class="side-viking viking-left">
+    <img src="images/viking_2.png" alt="Viking 2" class="side-viking viking-right">
+
+    <div class="about-header">
+        <h1>Meet the Little Kattegat’s Crew</h1>
+        <p>Hide your children, or you will see them silenced!...and then in pie.</p>
+    </div>
+
+    <div class="about-team">
+        <div class="team-member">
+            <img src="images/Ragnar.jpg" alt="Ragnar - Head Chef">
+            <h2>
+                <a href="https://en.wikipedia.org/wiki/Ragnar_Lodbrok" target="_blank" style="text-decoration:none; font-family:'norseregular',serif;">
+                    Ragnar Lodbrok
+                </a>
+                <br>
+                <span style="font-size:0.9em; color:#4a2c1a;">Head Chef</span>
+            </h2>            
+            <p>
+                After retiring from his Viking adventures, Ragnar discovered a passion for culinary arts while pillaging a Michelin-starred restaurant in Paris. Inspired by the precision and artistry of French cuisine, he decided to open his own eatery, where he could combine his love for cooking with his warrior spirit. He trained under renowned chefs at Le Cordon Bleu, adding a touch of sophistication to his savage cooking style.
+            </p>
+        </div>
+        <div class="team-member">
+            <img src="images/Lagertha.png" alt="Lagertha - Head of Front">
+            <h2>
+                <a href="https://en.wikipedia.org/wiki/Lagertha" target="_blank" style="text-decoration:none; font-family:'norseregular',serif;">
+                    Lagertha Sigurdardóttir
+                </a>
+                <br><span style="font-size:0.9em; color:#4a2c1a;">Head of Front</span>
+            </h2>
+            <p>
+                Having grown tired of the constant battles, Lagertha decided to channel her leadership skills into managing a restaurant. She was inspired by the efficient and welcoming atmosphere of modern American diners, particularly those in New York City. She studied hospitality management at Cornell University and believes every dining experience should be as strategic and exhilarating as a Viking raid. Her restaurant management style blends Viking fierceness with the warmth and efficiency of a bustling city diner.
+            </p>
+        </div>
+        <div class="team-member">
+            <img src="images/Floki.jpg" alt="Floki - Sommelier">
+            <h2>
+                <a href="https://en.wikipedia.org/wiki/Floki_(Vikings)" target="_blank" style="text-decoration:none; font-family:'norseregular',serif;">
+                    Floki Gonzalez
+                </a>
+                <br><span style="font-size:0.9em; color:#4a2c1a;">Sommelier</span></h2>
+            <p>
+                After his shipbuilding days, Floki found joy in concocting strange and potent beverages. His eccentric personality and love for chaos made him the perfect fit for the role of mixologist. He was inspired by the innovative cocktail culture of Tokyo's hidden bars and speakeasies. Floki trained under master mixologists in Japan, learning the art of crafting unique and theatrical drinks. His bar combines the mystique of Viking lore with the cutting-edge creativity of Tokyo's nightlife.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer" style="margin-top: auto;">
+        <div class="home-nav">
+            <a href="index.html">Home</a>
+        </div>
+        <p>© 2025 Little Kattegat’s. All rights reserved.</p>
+    </div>
+</body>
+</html>

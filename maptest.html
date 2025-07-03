@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join Us in Clear Lake!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: 'norseregular';
+            src: url('fonts/norse-font/norse-kawl-webfont.woff2') format('woff2'),
+                url('fonts/norse-font/norse-kawl-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+        .google-maps {
+            position: relative;
+            padding-bottom: 40%; /* 40% aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #eee;
+        }
+        .google-maps iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            /* Add parchment background, rotated 90deg and cover */
+            background-image: url('images/parchment.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            /* Rotate the background image using a pseudo-element */
+            position: relative;
+        }
+            body::before {
+                content: "";
+                position: fixed;
+                z-index: -1;
+                top: 0; left: 0; right: 0; bottom: 0;
+                width: 100vw;
+                height: 100vh;
+                background: url('images/parchment.png') center center/cover no-repeat;
+                transform: rotate(90deg);
+                transform-origin: center center;
+                opacity: 1;
+                pointer-events: none;
+            }
+        h1 {
+            margin-top: 30px;
+            color: #8b0000;
+            white-space: nowrap;
+            overflow-x: auto;
+            max-width: 100vw;
+            font-family: 'norseregular', serif;
+            text-shadow: 0 2px 8px #000, 0 0 2px #000;
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+                .footer {
+            margin-top: 30px;
+            font-size: 1.1em;
+            color: #4a2c1a;
+            text-align: center;
+        }
+        .home-nav {
+            margin: 20px 0;
+        }
+        .home-nav a {
+            display: inline-block;
+            margin: 0 18px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5em;
+            position: relative;
+            transition: color 0.2s;
+        }
+        .home-nav a:hover {
+            color: crimson;
+        }
+        .home-nav a::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: -3px;
+            width: 0;
+            height: 2px;
+            background: crimson;
+            transition: width 0.4s cubic-bezier(.4,0,.2,1);
+            transform: translateX(-50%);
+        }
+        .home-nav a:hover::after {
+            width: 100%;
+            transform: translateX(-50%);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Little Kattegat’s on the shores of Clear Lake</h1>
+    <div class="google-maps">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3137.964302049381!2d-122.83909168466944!3d39.0025739795527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8083e4e7b8e7b8e7%3A0x8e7b8e7b8e7b8e7b!2s2998%20Willow%20Rd%2C%20Kelseyville%2C%20CA%2095451%2C%20USA!5e0!3m2!1sen!2sus!4v1716633600000"
+            style="border:0;"
+            loading="lazy"
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+        <div class="footer">
+        <div class="home-nav">
+            <a href="index.html">Home</a>
+        </div>
+        <p>© 2025 Little Kattegat’s. All rights reserved.</p>
+    </div>
+</body>
+</html>
